@@ -19,6 +19,13 @@ app.get('/todos', async(req, res) => {
     const todos = await Todo.find();
 
     res.json(todos);
-})
+});
+
+const Project = require('./models/Project');
+app.get('/projects', async(req, res) => {
+    const projects = await Project.find();
+
+    res.json(projects);
+});
 
 app.listen(3001, () => console.log('Server started on port 3001'));
