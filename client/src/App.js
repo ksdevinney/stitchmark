@@ -21,7 +21,7 @@ function App() {
   }
 
   const completeTodo = async id => {
-    const data = fetch(API_BASE + '/todo/complete/' + id)
+    const data = await fetch(API_BASE + '/todo/complete/' + id)
       .then(res => res.json());
 
       setTodos(todos => todos.map(todo => {
