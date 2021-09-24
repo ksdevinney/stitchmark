@@ -38,7 +38,8 @@ app.delete('/todo/delete/:id', async (req, res) => {
     res.json(result);
 });
 // check off completed todos
-app.put('/todo/complete/:id', async (req, res) => {
+// get or put?
+app.get('/todo/complete/:id', async (req, res) => {
     const todo = await Todo.findById(req.params.id);
 
     todo.complete = !todo.complete;
