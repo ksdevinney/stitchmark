@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const TodoSchema = new Schema({
     text: {
         type: String,
-        required: true
+        require: true
     },
     complete: {
         type: Boolean,
