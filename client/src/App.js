@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
 
 const API_BASE = 'http://localhost:3001';
 
@@ -59,8 +60,7 @@ function App() {
   return (
     <div className="App">
       {/* header/nav here */}
-      <h1>StitchMark</h1>
-      <h4>Keep up with your crafting projects!</h4>
+      <Header />
 
       <div className="todos">
         {todos.map(todo => (
